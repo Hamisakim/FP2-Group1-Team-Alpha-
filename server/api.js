@@ -1,6 +1,11 @@
 import { Router } from "express";
+import { Octokit} from "octokit";
 
 import logger from "./utils/logger";
+
+const octokit = new Octokit({});
+await octokit.request("GET /octocat", {});
+
 
 const router = Router();
 
